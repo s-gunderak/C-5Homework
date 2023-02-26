@@ -13,14 +13,14 @@ int[] GetArray(int size, int minValue, int maxValue)
     Console.WriteLine();
     return array;
 }
-int oddNumbers = 0;
+int evenNumbers = 0;
 foreach (int el in array)//foreach берёт каждый элемент (el) по заданному условию (el==n или el<>n и т.д.)
 //и выводит результат, который мы хотим в теле цикла if else. Ему не нужно задавать границы, т.к. они у нас уже заданы ранее условиями массива.
 {
     if (el % 2 == 0)
     {
-        oddNumbers += 1;
+        evenNumbers += 1;
     }
 }
 Console.WriteLine();
-Console.WriteLine($"Количество чётных чисел в массиве = {oddNumbers}.");
+Console.WriteLine($"Количество чётных чисел в массиве = {evenNumbers}.");
