@@ -3,7 +3,8 @@
 // [-4, -6, 89, 6] -> 0
 
 int[] arrayA = GetArray(5, 0, 10);
-int[] oddNumsSum = OddNumsSum(arrayA);
+int oddNumsSum = OddNumsSum(arrayA);
+Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях = {oddNumsSum}.");
 int[] GetArray(int size, int minValue, int maxValue)
 {
     int[] array = new int[size];
@@ -15,14 +16,14 @@ int[] GetArray(int size, int minValue, int maxValue)
     Console.WriteLine();
     return array;
 }
-int[] OddNumsSum(int[] array)
+int OddNumsSum(int[] array)
 {
-    int[] res = array;
+    int res = 0;
     for (int i = 1; i < array.Length; i += 2)
     {
-        res[i] += res[i];
+        res += array[i];
     }
     return res;
 }
 
-Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях = {oddNumsSum}.");
+
